@@ -1,6 +1,6 @@
 const { MongoClient, ObjectId } = require('mongodb')
 
-const connectionUrl = 'mongodb://localhost:27017'
+const connectionUrl= process.env.MONGO_URL ? process.env.MONGO_URL :'mongodb://localhost:27017';
 const dbName = 'store'
 
 let db
